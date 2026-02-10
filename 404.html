@@ -6,21 +6,24 @@
 
     <script>
       (function () {
-        var path = window.location.pathname;
-        var search = window.location.search;
-        var hash = window.location.hash;
+        var l = window.location;
 
-        // Redirect to root but preserve full path
-        window.location.replace(
-          window.location.origin +
+        // Prevent infinite redirect loop
+        if (l.search.indexOf("redirect=") !== -1) return;
+
+        var redirectPath =
+          l.pathname + l.search + l.hash;
+
+        l.replace(
+          l.origin +
           "/?redirect=" +
-          encodeURIComponent(path + search + hash)
+          encodeURIComponent(redirectPath)
         );
       })();
     </script>
   </head>
 
   <body>
-    <p>Redirecting...</p>
+    Redirecting...
   </body>
 </html>
