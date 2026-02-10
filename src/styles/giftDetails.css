@@ -1,0 +1,47 @@
+.gift-details-container {
+  width: 90%;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  animation: fadeIn 0.5s ease;
+}
+
+.gift-images {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.gift-images img {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  transition: transform 0.3s;
+}
+
+.gift-images img:hover {
+  transform: scale(1.04);
+}
+
+.gift-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gift-info h1 {
+  font-size: 32px;
+  color: #007bff;
+}
+
+.gift-card-box {
+  background: #f6f9ff;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+@keyframes fadeIn {
+  from {opacity:0; transform: translateY(30px);}
+  to {opacity:1; transform: translateY(0);}
+}

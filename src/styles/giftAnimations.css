@@ -1,0 +1,90 @@
+/* ===============================
+   BIRTHDAY CONFETTI
+================================ */
+.anim-birthday::before {
+  content: "🎉 🎊 🎉 🎊 🎉 🎊";
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 30px;
+  animation: confettiFall 6s linear infinite;
+}
+
+@keyframes confettiFall {
+  from { transform: translateY(-50px); }
+  to { transform: translateY(100vh); }
+}
+
+/* ===============================
+   VALENTINE HEART FLOAT
+================================ */
+.anim-valentine::before {
+  content: "❤️ 💕 💖 💕 ❤️";
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 28px;
+  animation: heartsFloat 8s ease infinite;
+}
+
+@keyframes heartsFloat {
+  0% { transform: translateY(0); opacity:0; }
+  50% { opacity:1; }
+  100% { transform: translateY(-100vh); opacity:0; }
+}
+
+/* ===============================
+   MARRIAGE ANNIVERSARY GOLD GLOW
+================================ */
+.anim-marriage-anniversary .gift-card {
+  animation: goldGlow 3s ease infinite alternate;
+}
+
+@keyframes goldGlow {
+  from { box-shadow: 0 0 15px gold; }
+  to { box-shadow: 0 0 45px gold; }
+}
+
+/* ===============================
+   WORK ANNIVERSARY BLUE GLOW
+================================ */
+.anim-work-anniversary .gift-card {
+  animation: blueGlow 3s ease infinite alternate;
+}
+
+@keyframes blueGlow {
+  from { box-shadow: 0 0 12px #007bff; }
+  to { box-shadow: 0 0 40px #007bff; }
+}
+
+/* ===============================
+   WEDDING INVITATION ROSE FALL
+================================ */
+.anim-wedding-invitation::before {
+  content: "🌹 🌹 🌹 🌹 🌹";
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 28px;
+  animation: roseFall 7s linear infinite;
+}
+
+@keyframes roseFall {
+  from { transform: translateY(-50px); }
+  to { transform: translateY(100vh); }
+}
+@keyframes gentleFloat1 {
+  0% { transform: translateY(0) rotate(-1deg); }
+  50% { transform: translateY(-20px) rotate(1deg); }
+  100% { transform: translateY(0) rotate(-1deg); }
+}
+
+@keyframes gentleFloat2 {
+  0% { transform: translateY(0) rotate(1deg); }
+  50% { transform: translateY(-25px) rotate(-1deg); }
+  100% { transform: translateY(0) rotate(1deg); }
+}
+

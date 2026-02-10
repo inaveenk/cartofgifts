@@ -1,0 +1,201 @@
+/* ===============================
+   BACKGROUND IMAGE
+================================ */
+.gift-bg {
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===============================
+   DARK BLUR OVERLAY
+================================ */
+.gift-overlay {
+  min-height: 100vh;
+  width: 100%;
+
+  backdrop-filter: blur(10px);
+  background: rgba(0,0,0,0.35);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px;
+  position: relative;
+
+  /* ❌ REMOVED z-index to avoid stacking trap */
+}
+
+/* ===============================
+   BIG CENTER GIFT CARD
+================================ */
+.gift-card {
+  background: rgba(255,255,255,0.95);
+  border-radius: 30px;
+  text-align: center;
+
+  box-shadow: 0 30px 90px rgba(0,0,0,0.25);
+
+  animation: floatCard 4s ease-in-out infinite alternate;
+
+  position: relative;
+  z-index: 10;   /* ✅ ADDED */
+}
+
+/* BIG VERSION */
+.big-card {
+  width: 650px;
+  max-width: 95%;
+  padding: 60px 50px;
+}
+
+/* ===============================
+   FLOAT CARD ANIMATION
+================================ */
+@keyframes floatCard {
+  from { transform: translateY(-8px); }
+  to { transform: translateY(12px); }
+}
+
+/* ===============================
+   TEXT STYLES
+================================ */
+.category-text {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #ff4081;
+  font-weight: 700;
+}
+
+.gift-title {
+  font-size: 34px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.gift-receiver {
+  color: #555;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.gift-message-box {
+  background: #f4f7ff;
+  padding: 20px;
+  border-radius: 20px;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.gift-footer {
+  margin-top: 15px;
+}
+
+.gift-greeting {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.gift-from {
+  font-size: 16px;
+  color: #444;
+}
+
+/* ===============================
+   OLD FLOATING IMAGE (KEPT SAFE IF USED)
+================================ */
+.floating-img {
+  position: fixed;
+  width: 170px;
+  border-radius: 22px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  z-index: 3;
+  opacity: 0.95;
+}
+
+.floating-1 {
+  top: 12%;
+  left: 4%;
+  animation: floatRandom1 9s ease-in-out infinite;
+}
+
+.floating-2 {
+  bottom: 10%;
+  right: 6%;
+  animation: floatRandom2 11s ease-in-out infinite;
+}
+
+@keyframes floatRandom1 {
+  0% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-35px) rotate(3deg); }
+  100% { transform: translateY(0) rotate(-2deg); }
+}
+
+@keyframes floatRandom2 {
+  0% { transform: translateY(0) rotate(2deg); }
+  50% { transform: translateY(-45px) rotate(-3deg); }
+  100% { transform: translateY(0) rotate(2deg); }
+}
+
+/* ===============================
+   CORNER POSITION CLASSES
+================================ */
+.top-left {
+  top: 4%;
+  left: 3%;
+  animation: gentleFloat1 8s ease-in-out infinite;
+}
+
+.bottom-right {
+  bottom: 4%;
+  right: 3%;
+  animation: gentleFloat2 10s ease-in-out infinite;
+}
+
+/* ===============================
+   CORNER IMAGE MAIN (TOP LAYER)
+================================ */
+.corner-img {
+  position: fixed;
+
+  width: 15vw;
+  height: 22.5vh;
+
+  object-fit: cover;
+  border-radius: 22px;
+
+  box-shadow: 0 25px 70px rgba(0,0,0,0.35);
+
+  z-index: 9999;
+  opacity: 0.85;
+}
+
+
+
+/* ===============================
+   CORNER FLOAT ANIMATION
+================================ */
+@keyframes gentleFloat1 {
+  0% { transform: translateY(0) rotate(-1deg); }
+  50% { transform: translateY(-25px) rotate(2deg); }
+  100% { transform: translateY(0) rotate(-1deg); }
+}
+
+@keyframes gentleFloat2 {
+  0% { transform: translateY(0) rotate(1deg); }
+  50% { transform: translateY(-30px) rotate(-2deg); }
+  100% { transform: translateY(0) rotate(1deg); }
+}
+
+/* ===============================
+   LOADING
+================================ */
+.loading {
+  text-align: center;
+  margin-top: 140px;
+  font-size: 24px;
+}

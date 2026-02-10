@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+
+    <script>
+      (function () {
+        var path = window.location.pathname;
+        var search = window.location.search;
+        var hash = window.location.hash;
+
+        // Redirect to root but preserve full path
+        window.location.replace(
+          window.location.origin +
+          "/?redirect=" +
+          encodeURIComponent(path + search + hash)
+        );
+      })();
+    </script>
+  </head>
+
+  <body>
+    <p>Redirecting...</p>
+  </body>
+</html>
